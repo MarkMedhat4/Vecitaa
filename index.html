@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Interface Design - Merged</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- الشريط العلوي -->
+    <div class="topbar">
+        <div class="left">
+            <a href="#" class="vezeeta-logo">
+                <span class="v-initial">V</span>ezeeta<span class="com">.com</span>
+            </a>
+        </div>
+
+        <div class="right">
+            <a href="#" class="signup">Sign Up</a>
+            <a href="#">Login</a>
+            <a href="#">Vezeeta For Doctors</a>
+            <a href="#">Contact Us</a>
+            <a href="#">عربي</a>
+
+            <div class="country">
+                <img src="https://flagcdn.com/w20/eg.png" class="flag">
+                <span>Egypt ▼</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- مقدمة الصفحة الرئيسية مع الخلفية -->
+    <div class="main-intro">
+        <div class="header" style="text-align:center; margin-top: 20px;">
+            <h2>Better Healthcare for a Better Life</h2>
+            <p>Book online or call <span class="red" style="color:red; font-weight:bold;">16676</span></p>
+        </div>
+
+        <!-- صندوق البحث -->
+        <div class="search-wrapper">
+            <!-- التبويبات (حجز كشف أو استشارة) -->
+            <div class="tabs-box">
+                <div class="tab active">
+                    <img src="https://img.icons8.com/ios/50/4a90e2/planner.png" class="icon">
+                    <div>
+                        <strong>Book a doctor</strong><br>
+                        <span>Examination or procedure</span>
+                    </div>
+                </div>
+
+                <div class="tab">
+                    <img src="https://img.icons8.com/ios/50/737373/headset.png" class="icon">
+                    <div>
+                        <strong>Telehealth</strong><br>
+                        <span>Call consultation with doctor</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- حقول الإدخال -->
+            <div class="inputs-box">
+                <div class="input-block">
+                    <label>Select a specialty</label>
+                    <div class="inner">
+                        <img src="https://img.icons8.com/ios/50/737373/stethoscope.png">
+                        <select>
+                            <option>Choose specialty</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-block">
+                    <label>In this city</label>
+                    <div class="inner">
+                        <img src="https://img.icons8.com/ios/50/737373/marker.png">
+                        <select>
+                            <option>Choose city</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-block">
+                    <label>In this area</label>
+                    <div class="inner">
+                        <img src="https://img.icons8.com/ios/50/737373/marker.png">
+                        <select>
+                            <option>Choose area</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-block name-field">
+                    <label>Or search by name</label>
+                    <div class="inner">
+                        <img src="https://img.icons8.com/ios/50/737373/user.png">
+                        <input type="text" placeholder="Doctor name or hospital">
+                    </div>
+                </div>
+
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المحتوى الأصلي للصفحة -->
+    <div class="container" style="margin-top: 40px;">
+        <!-- بانر الترحيب للطبيب البيطري -->
+        <div class="hero-banner">
+            <div class="ribbon"><span>NEW</span></div>
+
+            <div class="hero-item left-icon">
+                <img src="./Screenshot 2025-12-13 022238.jpg" alt="vet-icon" class="vet-icon">
+                <div class="red-dash"></div>
+            </div>
+
+            <div class="hero-item center-content">
+                <h2>Book a <strong>Veterinarian</strong> for your pet</h2>
+                <button class="btn-red">Book Now</button>
+            </div>
+
+            <div class="hero-item right-logo">
+                <span class="v-letter">V</span>
+                <div class="red-dash"></div>
+            </div>
+        </div>
+
+        <!-- شريط الملف الشخصي -->
+        <div class="profile">
+            <div class="avatar">
+                <img src="mental-health-image.jpg" alt="North by Vezeeta">
+            </div>
+            <div class="profile-info">
+                <div class="north-header">
+                    <h3 class="north-title">NORTH</h3>
+                    <span class="by-vezeeta">by Vezeeta</span>
+                </div>
+                <p class="north-desc">North, your way to practice peace.</p>
+            </div>
+            <div class="explore">
+                <button class="btn-light">Explore North</button>
+            </div>
+        </div>
+
+        <!-- بطاقة السؤال الطبي -->
+        <div class="card ask">
+            <div class="title">Do you have a medical question?</div>
+            <p>Send your medical question and get an answer from a specialist doctor</p>
+            <button class="btn-light">Ask Now</button>
+        </div>
+
+        <!-- بانر الصيدلية -->
+        <div class="pharmacy">
+            <div class="ph-content">
+                <h3>Pharmacy</h3>
+                <p>Get your medicine and all your pharmacy needs.</p>
+                <button class="btn-white">Place order</button>
+            </div>
+            <div class="ph-image-box">
+                <img src="./WhatsApp Image 2025-12-12 at 14.25.10_f1770610.jpg" alt="pharmacy">
+            </div>
+        </div>
+
+        <!-- bottom grid -->
+        <!-- شبكة البطاقات السفلية -->
+        <div class="grid">
+            <!-- بطاقة الاستشارات عن بعد -->
+            <div class="small-card">
+                <img src="https://cdn-react.vezeeta.com/vezeeta-web-reactjs/jenkins-54/images/telehealth-solution-card/desktop.webp"
+                    alt="Teleconsultation">
+                <div>
+                    <h4>Teleconsultation</h4>
+                    <p>Schedule a voice or video call with a specialized doctor.</p>
+                    <a href="#" class="link">Book a Call</a>
+                </div>
+            </div>
+            <!-- بطاقة الزيارة المنزلية -->
+            <div class="small-card">
+                <img src="https://cdn-react.vezeeta.com/vezeeta-web-reactjs/jenkins-54/images/homevisits-solution-card/eg/desktop.webp"
+                    alt="Home Visit">
+
+                <div>
+                    <h4>Home Visit</h4>
+                    <p>Choose the specialty, and the doctor will visit you at home.</p>
+                    <a href="#" class="link">Book a visit</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Top Features Section -->
+    <section class="features">
+        <div class="feature">
+            <img src="medical-care-icon.svg" alt="Healthcare">
+            <h3>All your healthcare needs</h3>
+            <p>Search and book a clinic visit, home visit, or a teleconsultation. Order your medicines and book a
+                service
+                or operation.</p>
+        </div>
+        <div class="feature">
+            <img src="doctor-icon.svg" alt="Doctor">
+            <h3>Verified patient reviews</h3>
+            <p>Doctor ratings are from patients who booked and visited the doctor through Vezeeta</p>
+        </div>
+        <div class="feature">
+            <img src="booking-icon.svg" alt="Booking">
+            <h3>Your booking is confirmed</h3>
+            <p>Your booking is automatically confirmed, as the doctor specified of the booking details.</p>
+        </div>
+        <div class="feature">
+            <img src="security-icon.svg" alt="Security">
+            <h3>Book for free, and pay in clinic</h3>
+            <p>The consultation fees stated on Vezeeta are the actual doctor's fees with no extra charges.</p>
+        </div>
+    </section>
+
+    <!-- Download App Section -->
+    <section class="download">
+        <div class="download-text">
+            <h2>Download Vezeeta Application</h2>
+            <p>
+                Search, compare and book doctor consultations with ease. Order your medicines & get them delivered
+                within
+                60 minutes. Track your steps count & earn points on hitting the daily goal
+            </p>
+            <div class="stores">
+                <a href="#">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                        alt="App Store">
+                </a>
+                <a href="#">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                        alt="Google Play">
+                </a>
+                <a href="#">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Huawei_AppGallery_badge_EN.svg"
+                        alt="App Gallery" style="border-radius:6px;">
+                </a>
+            </div>
+        </div>
+        <div class="download-image">
+            <img src="dowanloadApp-eg-en.webp" alt="Vezeeta App Mobile">
+        </div>
+    </section>
+
+    <!-- Bottom Tags Section -->
+    <section class="tags">
+        <div class="tag-group">
+            <h4>Choose and book from top specialties</h4>
+            <div class="buttons">
+                <button>Dermatologist</button>
+                <button>Dentist</button>
+                <button>Pediatrician</button>
+                <button>Neurologist</button>
+                <button>View More</button>
+            </div>
+        </div>
+        <div class="tag-group">
+            <h4>Choose and book from top cities</h4>
+            <div class="buttons">
+                <button>Cairo</button>
+                <button>Giza</button>
+                <button>Alexandria</button>
+                <button>North Coast</button>
+                <button>View More</button>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

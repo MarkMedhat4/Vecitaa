@@ -1,0 +1,902 @@
+/* Global Styles - الأنماط العامة */
+:root {
+    --primary-blue: #0070cd;
+    --primary-red: #ea2027;
+    --text-color: #333;
+    --light-gray: #f5f5f5;
+    --border-color: #e0e0e0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #eef4f8;
+    /* خلفية زرقاء فاتحة مشابهة للصورة */
+    margin: 0;
+    padding: 0;
+    font-family: 'Tajawal', sans-serif;
+    color: var(--text-color);
+}
+
+/* Topbar - الشريط العلوي */
+.topbar {
+    width: 100%;
+    background: var(--primary-blue);
+    padding: 12px 6%;
+    /* Standardized side padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+}
+
+/* Logo Style Replacements */
+.vezeeta-logo {
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: 800;
+    color: white;
+    font-family: 'Tajawal', sans-serif;
+    letter-spacing: -0.5px;
+    display: inline-flex;
+    align-items: baseline;
+}
+
+.vezeeta-logo .v-initial {
+    position: relative;
+    display: inline-block;
+}
+
+.vezeeta-logo .v-initial::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 1px;
+    width: 90%;
+    height: 4px;
+    background-color: #ea2027;
+    /* Red accent */
+    border-radius: 2px;
+}
+
+.vezeeta-logo .com {
+    color: #ea2027;
+    /* Red .com */
+    font-weight: 400;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    /* Increased gap */
+}
+
+.right a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: opacity 0.2s;
+}
+
+.right a:hover {
+    opacity: 0.8;
+}
+
+.signup {
+    background: white;
+    color: var(--primary-blue) !important;
+    padding: 10px 20px;
+    /* Larger button */
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.country {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.flag {
+    width: 24px;
+    border-radius: 2px;
+}
+
+/* Main Intro (Hero Section) - قسم المقدمة الرئيسي */
+.main-intro {
+    background-image: url('https://temp.radianteyesofboca.com/wp-content/uploads/2020/03/Facetime-doctor.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    /* ضبط الموضع لإظهار الطبيب بشكل جيد */
+    background-repeat: no-repeat;
+    padding-top: 60px;
+    /* مسافة فوق نص العنوان */
+    padding-bottom: 100px;
+    /* مسافة تحت صندوق البحث */
+    position: relative;
+}
+
+/* إضافة طبقة شفافة لتحسين قراءة النص */
+.main-intro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    /* طبقة بيضاء خفيفة */
+    z-index: 0;
+}
+
+.main-intro>* {
+    position: relative;
+    z-index: 1;
+    /* التأكد من أن المحتوى فوق الطبقة */
+}
+
+/* Header Text - نص العنوان */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    /* نص داكن لتباين أفضل */
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.header p {
+    font-size: 18px;
+    color: #444;
+    /* نص داكن لتباين أفضل */
+    margin: 0;
+}
+
+.header .red {
+    color: var(--primary-red);
+    font-weight: bold;
+}
+
+/* Search Wrapper - حاوية صندوق البحث الكاملة */
+.search-wrapper {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: visible;
+}
+
+/* Tabs - التبويبات العلوية (حجز دكتور / مكالمة) */
+.tabs-box {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    padding: 0;
+}
+
+.tab {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 4px solid transparent;
+    transition: all 0.3s;
+}
+
+.tab:hover {
+    background-color: #fcfcfc;
+}
+
+.tab.active {
+    border-bottom-color: var(--primary-blue);
+}
+
+.tab img {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+    /* Default grey filter or opacity can be handled here if images aren't pre-colored */
+}
+
+.tab.active img {
+    filter: invert(34%) sepia(98%) saturate(1750%) hue-rotate(190deg) brightness(95%) contrast(101%);
+}
+
+.tab div {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.tab strong {
+    color: #555;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.tab.active strong {
+    color: var(--primary-blue);
+}
+
+.tab span {
+    font-size: 13px;
+    color: #888;
+}
+
+/* Inputs Box Container - حاوية حقول الإدخال (التخصص، المنطقة...) */
+/* The Bordered Bar for Inputs */
+/* Let's style .inputs-box itself as the container for the inputs if possible, 
+   but the image shows padding inside the white card before the grey input bar. 
+   I will treat .inputs-box as the wrapper for the input row. 
+*/
+
+.inputs-box {
+    display: flex;
+    margin: 20px;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    gap: 0;
+    align-items: stretch;
+    height: 70px;
+    /* Fixed height for consistency */
+}
+
+.input-block {
+    flex: 1;
+    background: #fff;
+    border: none;
+    border-right: 1px solid #eee;
+    /* Divider */
+    border-radius: 0;
+    padding: 8px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.input-block:first-child {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+/* Remove hover effect on individual blocks or make it subtle background change */
+.input-block:hover {
+    background-color: #fafafa;
+    border-color: transparent;
+    /* Remove old border change */
+    border-right: 1px solid #eee;
+}
+
+.input-block label {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 2px;
+    font-weight: 400;
+}
+
+.inner {
+    border: none;
+    padding: 0;
+    background: transparent;
+}
+
+.inner img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    opacity: 1;
+    /* Use filters to color icons blue if they are black/grey */
+    filter: invert(34%) sepia(98%) saturate(1750%) hue-rotate(190deg) brightness(95%) contrast(101%);
+}
+
+select,
+input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 15px;
+    color: var(--primary-blue);
+    font-weight: 700;
+    font-family: 'Tajawal', sans-serif;
+    cursor: pointer;
+}
+
+/* Placeholder styling - تنسيق النص النائب */
+::placeholder {
+    color: var(--primary-blue);
+    opacity: 0.7;
+}
+
+/* Name field - حقل البحث بالاسم (يأخذ مساحة أكبر قليلًا) */
+.name-field {
+    flex: 1.5;
+    border-right: none;
+    /* No divider before button if button covers it, but button needs to be styled */
+}
+
+/* Search Button - زر البحث الأحمر */
+.search-btn {
+    background: var(--primary-red);
+    color: white;
+    border: none;
+    border-radius: 0 12px 12px 0;
+    /* Rounded right corners */
+    padding: 0 40px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Tajawal', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.3s;
+    box-shadow: none;
+    flex-shrink: 0;
+    margin: -1px;
+    /* Overlap border */
+    margin-left: 0;
+    height: calc(100% + 2px);
+    /* Fill height + borders */
+}
+
+.search-btn:hover {
+    background-color: #d1191f;
+}
+
+.search-btn::before {
+    /* Icon style */
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('https://img.icons8.com/ios-filled/50/ffffff/search--v1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+}
+
+
+/* --- Original Content Styles - تنسيقات المحتوى الأصلي --- */
+
+.container {
+    max-width: 1150px;
+    margin: 50px auto 80px;
+    padding: 0 20px;
+}
+
+/* Updated Hero Banner Style - تصميم بانر الترحيب (الطبيب البيطري) */
+.hero-banner {
+    background: radial-gradient(circle at center, #0070cd 0%, #00569e 100%);
+    color: #fff;
+    border-radius: 12px;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Ribbon "NEW" - شريط العلامة الجديدة (أعلى اليسار) */
+.ribbon {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    overflow: hidden;
+    width: 75px;
+    height: 75px;
+}
+
+.ribbon span {
+    position: absolute;
+    display: block;
+    width: 100px;
+    padding: 5px 0;
+    background-color: #ea2027;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    color: #fff;
+    font-weight: bold;
+    font-size: 11px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+    text-transform: uppercase;
+    text-align: center;
+    left: -24px;
+    top: 15px;
+    transform: rotate(-45deg);
+}
+
+/* Hero Content Items - عناصر البانر (النص، الأيقونة، الزر) */
+.hero-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-content h2 {
+    font-size: 24px;
+    margin: 0 0 10px 0;
+    font-weight: 400;
+}
+
+.center-content h2 strong {
+    font-weight: 700;
+}
+
+.vet-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+/* Red dash accent - الشرطة الحمراء التجميلية */
+.red-dash {
+    width: 25px;
+    height: 4px;
+    background-color: #ea2027;
+    border-radius: 2px;
+}
+
+/* V Logo - شعار حرف V الكبير */
+.v-letter {
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 0px;
+}
+
+.btn-red {
+    background: #ea2027;
+    color: white;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+/* Pharmacy Banner Updated - بانر الصيدلية (الأزرق السفلي) */
+.pharmacy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 40px;
+    border-radius: 12px;
+    background: radial-gradient(circle at center, #0070cd 0%, #00569e 100%);
+    color: #fff;
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.ph-content {
+    flex: 1;
+}
+
+.pharmacy h3 {
+    margin: 0 0 8px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.pharmacy p {
+    margin: 0 0 18px;
+    opacity: 0.95;
+    font-size: 14px;
+}
+
+.btn-white {
+    background: #fff;
+    color: var(--primary-blue);
+    padding: 10px 25px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.ph-image-box {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ph-image-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    /* remove any background/border */
+}
+
+
+/* Profile / Cards / Grid - الملف الشخصي / البطاقات / الشبكة */
+.profile,
+.card,
+.small-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.profile-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.north-header {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    /* Space between NORTH and by Vezeeta */
+    margin-bottom: 5px;
+}
+
+.north-title {
+    font-size: 30px;
+    font-weight: 800;
+    color: #0070cd;
+    margin: 0;
+    line-height: 1;
+    letter-spacing: 0.5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Geometric sans */
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    /* border-radius: 50%; Remove circle crop to match cutout style */
+    overflow: visible;
+    flex-shrink: 0;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* or cover depending on image */
+    border-radius: 50%;
+    /* If user wants round image still, keep this on IMG, or remove */
+}
+
+.btn-light {
+    background: #eaf3ff;
+    color: var(--primary-blue);
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Ask Card - بطاقة السؤال الطبي */
+.ask .title {
+    font-weight: 800;
+    margin-bottom: 10px
+}
+
+.ask p {
+    color: #6b7280;
+    margin: 0 0 12px
+}
+
+.card.ask {
+    margin-top: 30px;
+}
+
+/* Grid - الشبكة الثنائية للبطاقات السفلية */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.small-card {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    /* Align to top to match image */
+    padding: 30px;
+    transition: transform 0.2s;
+}
+
+.small-card:hover {
+    transform: translateY(-3px);
+}
+
+.small-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.small-card h4 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+}
+
+.small-card p {
+    margin: 0 0 15px 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Link Style - تنسيق الروابط مع السهم */
+.link {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 700;
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.link::after {
+    content: ' \25B6';
+    /* Solid arrow */
+    color: var(--primary-red);
+    font-size: 10px;
+    margin-left: 6px;
+    display: inline-block;
+}
+
+/* Responsive - التجاوب مع الشاشات */
+@media (max-width: 900px) {
+    .inputs-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .input-block,
+    .name-field,
+    .search-btn {
+        width: 100%;
+        flex: none;
+    }
+
+    .topbar {
+        padding: 10px 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .right {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-banner,
+    .pharmacy {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .pharmacy {
+        align-items: center;
+        /* Center correctly in column mode */
+    }
+
+    .ph-image-box {
+        order: -1;
+        /* Image first on mobile? or last. default is last */
+        margin-bottom: 15px;
+    }
+}
+
+/* --- New Sections: Features, Download, Tags --- */
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 20px;
+    background: #fff;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.feature {
+    width: 22%;
+    min-width: 200px;
+    text-align: left;
+    /* Changed from center to left */
+}
+
+.feature img {
+    height: 40px;
+    /* Adjusted size */
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    font-size: 18px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.feature p {
+    font-size: 15px;
+    color: #777;
+    line-height: 1.6;
+}
+
+/* Download Section */
+.download {
+    background: #0a6ed1;
+    /* Or use var(--primary-blue) if you want exact match */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.download-text {
+    max-width: 500px;
+}
+
+.download-text img {
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.download-text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.download-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.stores {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.stores a img {
+    height: 40px;
+    /* Standard badge height */
+    width: auto;
+    border-radius: 6px;
+    transition: transform 0.2s;
+}
+
+.stores a:hover img {
+    transform: translateY(-2px);
+}
+
+.download-image img {
+    width: auto;
+    max-height: 400px;
+    /* Constrain height */
+    max-width: 100%;
+}
+
+/* Tags Section */
+.tags {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 40px;
+    background: #fcfcfc;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.tag-group {
+    flex: 1;
+    min-width: 300px;
+}
+
+.tag-group h4 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #333;
+    font-weight: 700;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.buttons button {
+    padding: 10px 18px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: inherit;
+    color: #555;
+    transition: all 0.2s;
+}
+
+.buttons button:hover {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+    background: #f0f7ff;
+}
+
+@media (max-width: 768px) {
+
+    .features,
+    .tags {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature,
+    .tag-group {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .download {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .download-text {
+        width: 100%;
+    }
+
+    .stores {
+        justify-content: center;
+    }
+}
