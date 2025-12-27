@@ -873,6 +873,134 @@ input {
     background: #f0f7ff;
 }
 
+/* Slider Section */
+.slider {
+    background-color: #ffffff;
+    padding: 2rem;
+}
+
+.slider:nth-child(2) {
+    background-color: #eef0f2;
+}
+
+.slider .container {
+    margin: auto;
+    width: 73%;
+}
+
+.slider .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.slider .header .container h1 {
+    color: #666666;
+}
+
+.slider .images .container {
+    display: flex;
+    gap: 1rem;
+    overflow: scroll hidden;
+}
+
+.slider .images .container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Slider details and cards */
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.slider .header a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #0070cd;
+}
+
+.slider .header a:hover {
+    text-decoration: underline;
+}
+
+.slider .header a i {
+    color: #fd7e7e;
+    margin-left: 6px;
+}
+
+.slider .images .container .discount {
+    position: relative;
+}
+
+.slider .images .container .discount:hover {
+    cursor: pointer;
+}
+
+.slider .images .container .discount img {
+    width: 260px;
+    border-radius: 10px;
+}
+
+.slider .images .container .discount .img-discount {
+    position: absolute;
+    top: 3%;
+    left: 2%;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #e02020;
+    border-left: 0.2rem solid #ae0d0d;
+    padding: 0.2rem;
+}
+
+.slider .images .container .discount h4 {
+    margin: 4px 0;
+    color: #6f7072;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.slider .images .container .discount p {
+    margin: 0px;
+    color: #6f7072;
+    font-size: 1rem;
+}
+
+.slider .images .container .discount p .new-price {
+    color: #0079d7;
+    font-size: 1rem;
+}
+
+.slider .images .container .card:hover {
+    cursor: pointer;
+}
+
+.slider .images .container .card {
+    min-width: 250px;
+    max-width: 400px;
+    margin: 0;
+    background-color: initial;
+    border: none;
+}
+
+.slider .images .container .card img {
+    border-radius: 1rem 1rem 0 0;
+}
+
+.slider .images .container .card .img-text {
+    color: #666666;
+    font-size: 0.7rem;
+    font-weight: bold;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 0 0 1rem 1rem;
+    margin-bottom: 0;
+}
+
 @media (max-width: 768px) {
 
     .features,
