@@ -170,19 +170,19 @@ body {
 
 /* Search Wrapper - حاوية صندوق البحث الكاملة */
 .search-wrapper {
-    width: 85%;
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     background: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    overflow: visible;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
 }
 
 /* Tabs - التبويبات العلوية (حجز دكتور / مكالمة) */
 .tabs-box {
     display: flex;
-    border-bottom: 1px solid #eee;
+    border-bottom: 2px solid #f0f0f0;
     padding: 0;
 }
 
@@ -191,25 +191,26 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 18px 20px;
     cursor: pointer;
     border-bottom: 4px solid transparent;
-    transition: all 0.3s;
+    transition: all 0.25s ease;
+    background: #fafafa;
 }
 
 .tab:hover {
-    background-color: #fcfcfc;
+    background-color: #f5f5f5;
 }
 
 .tab.active {
     border-bottom-color: var(--primary-blue);
+    background: white;
 }
 
 .tab img {
-    width: 28px;
-    height: 28px;
-    margin-right: 10px;
-    /* Default grey filter or opacity can be handled here if images aren't pre-colored */
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
 }
 
 .tab.active img {
@@ -220,10 +221,11 @@ body {
     display: flex;
     flex-direction: column;
     text-align: left;
+    gap: 2px;
 }
 
 .tab strong {
-    color: #555;
+    color: #333;
     font-size: 16px;
     font-weight: 700;
 }
@@ -233,8 +235,8 @@ body {
 }
 
 .tab span {
-    font-size: 13px;
-    color: #888;
+    font-size: 12px;
+    color: #999;
 }
 
 /* Inputs Box Container - حاوية حقول الإدخال (التخصص، المنطقة...) */
@@ -248,22 +250,20 @@ body {
     display: flex;
     margin: 20px;
     padding: 0;
-    border: 1px solid #ccc;
-    border-radius: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     gap: 0;
     align-items: stretch;
-    height: 70px;
-    /* Fixed height for consistency */
+    height: 68px;
 }
 
 .input-block {
     flex: 1;
     background: #fff;
     border: none;
-    border-right: 1px solid #eee;
-    /* Divider */
+    border-right: 1px solid #e5e5e5;
     border-radius: 0;
-    padding: 8px 15px;
+    padding: 12px 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -271,37 +271,36 @@ body {
 }
 
 .input-block:first-child {
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 
-/* Remove hover effect on individual blocks or make it subtle background change */
 .input-block:hover {
     background-color: #fafafa;
-    border-color: transparent;
-    /* Remove old border change */
-    border-right: 1px solid #eee;
+    border-right: 1px solid #e5e5e5;
 }
 
 .input-block label {
-    font-size: 12px;
-    color: #666;
-    margin-bottom: 2px;
-    font-weight: 400;
+    font-size: 11px;
+    color: #999;
+    margin-bottom: 4px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
 }
 
 .inner {
     border: none;
     padding: 0;
     background: transparent;
+    display: flex;
+    align-items: center;
 }
 
 .inner img {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     margin-right: 8px;
     opacity: 1;
-    /* Use filters to color icons blue if they are black/grey */
     filter: invert(34%) sepia(98%) saturate(1750%) hue-rotate(190deg) brightness(95%) contrast(101%);
 }
 
@@ -311,9 +310,9 @@ input {
     border: none;
     background: transparent;
     outline: none;
-    font-size: 15px;
+    font-size: 14px;
     color: var(--primary-blue);
-    font-weight: 700;
+    font-weight: 600;
     font-family: 'Tajawal', sans-serif;
     cursor: pointer;
 }
@@ -324,11 +323,10 @@ input {
     opacity: 0.7;
 }
 
-/* Name field - حقل البحث بالاسم (يأخذ مساحة أكبر قليلًا) */
+/* Name field - حقل البحث بالاسم */
 .name-field {
-    flex: 1.5;
+    flex: 1.2;
     border-right: none;
-    /* No divider before button if button covers it, but button needs to be styled */
 }
 
 /* Search Button - زر البحث الأحمر */
@@ -336,25 +334,21 @@ input {
     background: var(--primary-red);
     color: white;
     border: none;
-    border-radius: 0 12px 12px 0;
-    /* Rounded right corners */
-    padding: 0 40px;
-    font-size: 18px;
-    font-weight: bold;
+    border-radius: 0 8px 8px 0;
+    padding: 0 32px;
+    font-size: 16px;
+    font-weight: 700;
     cursor: pointer;
     font-family: 'Tajawal', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    transition: background 0.3s;
+    gap: 8px;
+    transition: background 0.2s;
     box-shadow: none;
     flex-shrink: 0;
-    margin: -1px;
-    /* Overlap border */
-    margin-left: 0;
+    margin: -1px -1px -1px 0;
     height: calc(100% + 2px);
-    /* Fill height + borders */
 }
 
 .search-btn:hover {
@@ -362,15 +356,14 @@ input {
 }
 
 .search-btn::before {
-    /* Icon style */
     content: '';
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     background-image: url('https://img.icons8.com/ios-filled/50/ffffff/search--v1.png');
     background-size: contain;
     background-repeat: no-repeat;
-    margin-right: 5px;
+    margin-right: 3px;
 }
 
 
@@ -876,16 +869,22 @@ input {
 /* Slider Section */
 .slider {
     background-color: #ffffff;
-    padding: 2rem;
+    padding: 50px 0;
 }
 
 .slider:nth-child(2) {
-    background-color: #eef0f2;
+    background-color: #eef4f8;
+}
+
+.slider .header {
+    margin-bottom: 40px;
+    padding: 0 20px;
 }
 
 .slider .container {
     margin: auto;
-    width: 73%;
+    width: 90%;
+    max-width: 1200px;
 }
 
 .slider .header .container {
@@ -895,20 +894,43 @@ input {
     align-content: center;
     flex-wrap: wrap;
     padding: 0;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
 }
 
 .slider .header .container h1 {
     color: #666666;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.slider .images {
+    padding: 0 20px;
 }
 
 .slider .images .container {
     display: flex;
-    gap: 1rem;
-    overflow: scroll hidden;
+    gap: 24px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px 0;
+    scroll-behavior: smooth;
 }
 
 .slider .images .container::-webkit-scrollbar {
-    display: none;
+    height: 6px;
+}
+
+.slider .images .container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.slider .images .container::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 10px;
 }
 
 /* Slider details and cards */
@@ -934,40 +956,49 @@ html {
 
 .slider .images .container .discount {
     position: relative;
+    min-width: 270px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .slider .images .container .discount:hover {
-    cursor: pointer;
+    transform: translateY(-5px);
 }
 
 .slider .images .container .discount img {
-    width: 260px;
-    border-radius: 10px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
 }
 
 .slider .images .container .discount .img-discount {
     position: absolute;
-    top: 3%;
-    left: 2%;
-    font-size: 0.7rem;
-    font-weight: bold;
+    top: 12px;
+    left: 12px;
+    font-size: 13px;
+    font-weight: 700;
     color: #ffffff;
     background-color: #e02020;
-    border-left: 0.2rem solid #ae0d0d;
-    padding: 0.2rem;
+    padding: 6px 10px;
+    border-radius: 4px;
 }
 
 .slider .images .container .discount h4 {
-    margin: 4px 0;
-    color: #6f7072;
-    font-size: 1rem;
-    font-weight: bold;
+    margin: 16px 0 8px 0;
+    color: #666666;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.3;
 }
 
 .slider .images .container .discount p {
-    margin: 0px;
-    color: #6f7072;
-    font-size: 1rem;
+    margin: 0 0 6px 0;
+    color: #999999;
+    font-size: 14px;
+    line-height: 1.4;
 }
 
 .slider .images .container .discount p .new-price {
@@ -975,30 +1006,37 @@ html {
     font-size: 1rem;
 }
 
-.slider .images .container .card:hover {
-    cursor: pointer;
-}
-
 .slider .images .container .card {
-    min-width: 250px;
-    max-width: 400px;
-    margin: 0;
-    background-color: initial;
+    min-width: 220px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background-color: transparent;
     border: none;
 }
 
+.slider .images .container .card:hover {
+    transform: translateY(-5px);
+}
+
 .slider .images .container .card img {
-    border-radius: 1rem 1rem 0 0;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    display: block;
 }
 
 .slider .images .container .card .img-text {
     color: #666666;
-    font-size: 0.7rem;
-    font-weight: bold;
+    font-size: 15px;
+    font-weight: 700;
     background-color: #ffffff;
-    padding: 1rem;
-    border-radius: 0 0 1rem 1rem;
-    margin-bottom: 0;
+    padding: 16px 12px;
+    border-radius: 0 0 12px 12px;
+    margin: 0;
+    text-align: center;
+    line-height: 1.4;
 }
 
 @media (max-width: 768px) {
