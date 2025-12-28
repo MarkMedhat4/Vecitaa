@@ -1,0 +1,92 @@
+/* Mobile Responsive Styles for Slider */
+
+@media (max-width: 768px) {
+    .slider {
+        padding: 30px 0;
+    }
+
+    .slider .header .container,
+    .slider .container {
+        width: 95%;
+    }
+
+    .slider .header .container h1 {
+        font-size: 22px;
+    }
+
+    .slider .images .container .discount {
+        min-width: 240px;
+    }
+
+    .slider .images .container .discount img {
+        height: 180px;
+    }
+
+    .slider .images .container .discount h4 {
+        font-size: 14px;
+    }
+
+    .slider .images .container .card {
+        min-width: 190px;
+    }
+
+    .slider .images .container .card img {
+        height: 150px;
+    }
+
+    .slider .images .container .card .img-text {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider {
+        padding: 20px 0;
+    }
+
+    .slider .header .container,
+    .slider .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .slider .header {
+        padding: 0 15px;
+    }
+
+    .slider .images {
+        padding: 0 15px;
+    }
+
+    .slider .header .container h1 {
+        font-size: 20px;
+    }
+
+    .slider .images .container {
+        gap: 16px;
+    }
+
+    .slider .images .container .discount {
+        min-width: 200px;
+    }
+
+    .slider .images .container .discount img {
+        height: 150px;
+    }
+
+    .slider .images .container .discount h4 {
+        font-size: 13px;
+    }
+
+    .slider .images .container .card {
+        min-width: 160px;
+    }
+
+    .slider .images .container .card img {
+        height: 130px;
+    }
+
+    .slider .images .container .card .img-text {
+        font-size: 12px;
+    }
+}
